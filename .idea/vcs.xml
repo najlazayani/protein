@@ -2,12 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/Clipper" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/TetWild" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/WindingNumber" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/carve" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/cgal" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PyMesh/third_party/cork" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SHREC2021" vcs="Git" />
   </component>
 </project>
