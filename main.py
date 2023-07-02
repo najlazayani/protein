@@ -1,6 +1,6 @@
 # This is a sample Python script.
 import igl
-import PyMesh
+
 
 import numpy as np
 
@@ -44,7 +44,7 @@ def read_txt_file():
 if __name__ == '__main__':
 
 
- database_path ="C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/OFFs";
+ database_path ="./SHREC2021/dataset/training_set/OFFs";
  mesh = read_mesh_from_off(database_path)
  print(mesh)
  vertices = mesh.vertices  # Access the vertices of the mesh
@@ -58,7 +58,7 @@ if __name__ == '__main__':
  print("Faces:")
  print(faces_np)
 
-file_path = "C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/properties/1.txt"
+file_path = "./SHREC2021/dataset/training_set/properties/1.txt"
 read_txt_file()
 
 
