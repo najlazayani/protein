@@ -1,7 +1,10 @@
 # This is a sample Python script.
 import igl
-import meshplot as mp
-import numpy as  np
+import PyMesh
+
+import numpy as np
+
+
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
@@ -16,11 +19,31 @@ def read_mesh_from_off(database_path):
 
     return mesh
 
+def read_txt_file():
+    file_path = "C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/properties/1.txt"  # Replace with the actual path to your file
+
+    # Read the file and store its contents in a list
+    with open(file_path, "r") as file:
+        lines = file.readlines()
+
+    # Process the data as needed
+    data = []
+    vector = []
+
+    for line in lines:
+        values = line.strip().split()  # Split the line by whitespace
+        values = [float(val) for val in values]  # Convert values to float
+        data.append(values)
+
+    # Print the data
+
+        print(data)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
- """""
+
+
  database_path ="C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/OFFs";
  mesh = read_mesh_from_off(database_path)
  print(mesh)
@@ -34,7 +57,8 @@ if __name__ == '__main__':
 
  print("Faces:")
  print(faces_np)
-"""
- v, f = igl.read_triangle_mesh('C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/OFFs/1.off')
- mp.plot(v, f)
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+file_path = "C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/properties/1.txt"
+read_txt_file()
+
+
