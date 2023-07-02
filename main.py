@@ -13,14 +13,14 @@ import numpy as np
 import open3d as o3d
 
 def read_mesh_from_off(database_path):
-    mesh_file = database_path + "/1.off"  # Replace "example.off" with the actual filename of the .OFF file in your database
+    mesh_file = database_path + "/1.off"
 
     mesh = o3d.io.read_triangle_mesh(mesh_file)
 
     return mesh
 
-def read_txt_file():
-    file_path = "C:/Users/pc/Desktop/FaceNet/SHREC2021/dataset/training_set/properties/1.txt"  # Replace with the actual path to your file
+def convert_txt_vector():
+    file_path = "./SHREC2021/dataset/training_set/properties/1.txt"
 
     # Read the file and store its contents in a list
     with open(file_path, "r") as file:
@@ -28,16 +28,17 @@ def read_txt_file():
 
     # Process the data as needed
     data = []
-    vector = []
+
 
     for line in lines:
         values = line.strip().split()  # Split the line by whitespace
         values = [float(val) for val in values]  # Convert values to float
         data.append(values)
+    return data
 
-    # Print the data
 
-        print(data)
+
+
 
 
 # Press the green button in the gutter to run the script.
@@ -58,7 +59,7 @@ if __name__ == '__main__':
  print("Faces:")
  print(faces_np)
 
-file_path = "./SHREC2021/dataset/training_set/properties/1.txt"
-read_txt_file()
-
+ file_path = "./SHREC2021/dataset/training_set/properties/1.txt"
+ data = convert_txt_vector()
+ print(data)
 
